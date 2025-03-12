@@ -3,368 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CS50 Harvard Course Overview</title>
-  <style>
-    /* Basic Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f7f6;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    section {
-      margin: 20px auto;
-      width: 80%;
-      max-width: 1000px;
-    }
-    .card {
-      background-color: #fff;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-    .card-header {
-      background-color: #4CAF50;
-      color: white;
-      font-size: 1.25em;
-      padding: 15px;
-      cursor: pointer;
-    }
-    .card-content {
-      padding: 15px;
-      background-color: #f9f9f9;
-    }
-    .card-content ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .card-content li {
-      margin-bottom: 10px;
-    }
-    .btn {
-      background-color: #008CBA;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 5px;
-    }
-    .btn:hover {
-      background-color: #007B9E;
-    }
-    footer {
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    footer p {
-      margin: 0;
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      overflow: auto;
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      max-width: 600px;
-      border-radius: 8px;
-    }
-    .close {
-      color: #aaa;
-      font-size: 28px;
-      font-weight: bold;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      cursor: pointer;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    iframe {
-      width: 100%;
-      height: 315px;
-      margin-bottom: 10px;
-      border: none;
-    }
-  </style>
+  <title>Course Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">CS50<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#syllabus">Syllabus</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
 
-  <header>
-    <h1>CS50: Introduction to Computer Science</h1>
-    <p>Explore the core topics of Harvard's famous CS50 course</p>
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="container">
+      <h1>Welcome to the Course</h1>
+      <p>Learn Computer Science from Scratch to Advanced Topics</p>
+      <a href="#syllabus" class="cta-button">Explore Syllabus</a>
+    </div>
   </header>
 
-  <section>
-    <!-- Week 0 -->
-    <div class="card">
-      <div class="card-header">Week 0: Introduction</div>
-      <div class="card-content">
+  <!-- Syllabus Content -->
+  <section id="syllabus" class="container">
+    <h1>Course Syllabus</h1>
+
+    <!-- Week 0: Scratch -->
+    <div class="week-card">
+      <h2>Week 0: Scratch</h2>
+      <p>Introduction to Computational Thinking and Problem Solving.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week0')">What is Computer Science?</button></li>
-          <li><button class="btn" onclick="openModal('week0')">Problem Solving and Algorithms</button></li>
-          <li><button class="btn" onclick="openModal('week0')">C Programming Basics</button></li>
+          <li><a href="#" class="open-modal" data-topic="Computational Thinking" data-video1="https://youtu.be/example1" data-video2="https://youtu.be/example2">Computational Thinking</a></li>
+          <li><a href="#" class="open-modal" data-topic="Problem Solving" data-video1="https://youtu.be/example3" data-video2="https://youtu.be/example4">Problem Solving</a></li>
+          <li><a href="#" class="open-modal" data-topic="Representation" data-video1="https://youtu.be/example5" data-video2="https://youtu.be/example6">Representation</a></li>
+          <li><a href="#" class="open-modal" data-topic="Abstraction" data-video1="https://youtu.be/example7" data-video2="https://youtu.be/example8">Abstraction</a></li>
+          <li><a href="#" class="open-modal" data-topic="Algorithms" data-video1="https://youtu.be/example9" data-video2="https://youtu.be/example10">Algorithms</a></li>
+          <li><a href="#" class="open-modal" data-topic="Scratch Basics" data-video1="https://youtu.be/example11" data-video2="https://youtu.be/example12">Scratch Basics</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 1 -->
-    <div class="card">
-      <div class="card-header">Week 1: C Programming</div>
-      <div class="card-content">
+    <!-- Week 1: C -->
+    <div class="week-card">
+      <h2>Week 1: C</h2>
+      <p>Introduction to the C programming language.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week1')">Introduction to C</button></li>
-          <li><button class="btn" onclick="openModal('week1')">Data Types and Variables</button></li>
-          <li><button class="btn" onclick="openModal('week1')">Control Flow</button></li>
+          <li><a href="#" class="open-modal" data-topic="C Basics" data-video1="https://youtu.be/example13" data-video2="https://youtu.be/example14">C Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="Variables and Types" data-video1="https://youtu.be/example15" data-video2="https://youtu.be/example16">Variables and Types</a></li>
+          <li><a href="#" class="open-modal" data-topic="Conditionals" data-video1="https://youtu.be/example17" data-video2="https://youtu.be/example18">Conditionals</a></li>
+          <li><a href="#" class="open-modal" data-topic="Loops" data-video1="https://youtu.be/example19" data-video2="https://youtu.be/example20">Loops</a></li>
+          <li><a href="#" class="open-modal" data-topic="Functions" data-video1="https://youtu.be/example21" data-video2="https://youtu.be/example22">Functions</a></li>
+          <li><a href="#" class="open-modal" data-topic="Debugging" data-video1="https://youtu.be/example23" data-video2="https://youtu.be/example24">Debugging</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 2 -->
-    <div class="card">
-      <div class="card-header">Week 2: Arrays and Algorithms</div>
-      <div class="card-content">
+    <!-- Week 2: Arrays -->
+    <div class="week-card">
+      <h2>Week 2: Arrays</h2>
+      <p>Working with arrays and strings in C.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week2')">Arrays</button></li>
-          <li><button class="btn" onclick="openModal('week2')">Sorting Algorithms</button></li>
-          <li><button class="btn" onclick="openModal('week2')">Searching Algorithms</button></li>
+          <li><a href="#" class="open-modal" data-topic="Arrays" data-video1="https://youtu.be/example25" data-video2="https://youtu.be/example26">Arrays</a></li>
+          <li><a href="#" class="open-modal" data-topic="Strings" data-video1="https://youtu.be/example27" data-video2="https://youtu.be/example28">Strings</a></li>
+          <li><a href="#" class="open-modal" data-topic="Command-Line Arguments" data-video1="https://youtu.be/example29" data-video2="https://youtu.be/example30">Command-Line Arguments</a></li>
+          <li><a href="#" class="open-modal" data-topic="Cryptography Basics" data-video1="https://youtu.be/example31" data-video2="https://youtu.be/example32">Cryptography Basics</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 3 -->
-    <div class="card">
-      <div class="card-header">Week 3: Algorithms and Problem Solving</div>
-      <div class="card-content">
+    <!-- Week 3: Algorithms -->
+    <div class="week-card">
+      <h2>Week 3: Algorithms</h2>
+      <p>Introduction to searching and sorting algorithms.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week3')">Recursion</button></li>
-          <li><button class="btn" onclick="openModal('week3')">Divide and Conquer</button></li>
+          <li><a href="#" class="open-modal" data-topic="Linear Search" data-video1="https://youtu.be/example33" data-video2="https://youtu.be/example34">Linear Search</a></li>
+          <li><a href="#" class="open-modal" data-topic="Binary Search" data-video1="https://youtu.be/example35" data-video2="https://youtu.be/example36">Binary Search</a></li>
+          <li><a href="#" class="open-modal" data-topic="Bubble Sort" data-video1="https://youtu.be/example37" data-video2="https://youtu.be/example38">Bubble Sort</a></li>
+          <li><a href="#" class="open-modal" data-topic="Selection Sort" data-video1="https://youtu.be/example39" data-video2="https://youtu.be/example40">Selection Sort</a></li>
+          <li><a href="#" class="open-modal" data-topic="Merge Sort" data-video1="https://youtu.be/example41" data-video2="https://youtu.be/example42">Merge Sort</a></li>
+          <li><a href="#" class="open-modal" data-topic="Recursion" data-video1="https://youtu.be/example43" data-video2="https://youtu.be/example44">Recursion</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 4 -->
-    <div class="card">
-      <div class="card-header">Week 4: Memory</div>
-      <div class="card-content">
+    <!-- Week 4: Memory -->
+    <div class="week-card">
+      <h2>Week 4: Memory</h2>
+      <p>Understanding memory management in C.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week4')">Pointers and Memory Management</button></li>
-          <li><button class="btn" onclick="openModal('week4')">Memory Allocation</button></li>
+          <li><a href="#" class="open-modal" data-topic="RGB & Memory" data-video1="https://youtu.be/EbVTuoWLgtc" data-video2="https://youtu.be/a2aW-CDNDrE">RGB & Memory</a></li>
+          <li><a href="#" class="open-modal" data-topic="Pointers" data-video1="https://youtu.be/DOhdZ7ULE4Y" data-video2="https://youtu.be/example46">Pointers</a></li>
+          <li><a href="#" class="open-modal" data-topic="Dynamic Memory Allocation" data-video1="https://youtu.be/example47" data-video2="https://youtu.be/example48">Dynamic Memory Allocation</a></li>
+          <li><a href="#" class="open-modal" data-topic="Stack and Heap" data-video1="https://youtu.be/example49" data-video2="https://youtu.be/example50">Stack and Heap</a></li>
+          <li><a href="#" class="open-modal" data-topic="File I/O" data-video1="https://youtu.be/example51" data-video2="https://youtu.be/example52">File I/O</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 5 -->
-    <div class="card">
-      <div class="card-header">Week 5: Data Structures</div>
-      <div class="card-content">
+    <!-- Week 5: Data Structures -->
+    <div class="week-card">
+      <h2>Week 5: Data Structures</h2>
+      <p>Introduction to common data structures.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week5')">Linked Lists</button></li>
-          <li><button class="btn" onclick="openModal('week5')">Stacks and Queues</button></li>
+          <li><a href="#" class="open-modal" data-topic="Queues" data-video1="https://youtu.be/example53" data-video2="https://youtu.be/example54">Queues</a></li>
+          <li><a href="#" class="open-modal" data-topic="Stacks" data-video1="https://youtu.be/example55" data-video2="https://youtu.be/example56">Stacks</a></li>
+          <li><a href="#" class="open-modal" data-topic="Linked Lists" data-video1="https://youtu.be/example57" data-video2="https://youtu.be/example58">Linked Lists</a></li>
+          <li><a href="#" class="open-modal" data-topic="Trees" data-video1="https://youtu.be/example59" data-video2="https://youtu.be/example60">Trees</a></li>
+          <li><a href="#" class="open-modal" data-topic="Hash Tables" data-video1="https://youtu.be/example61" data-video2="https://youtu.be/example62">Hash Tables</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 6 -->
-    <div class="card">
-      <div class="card-header">Week 6: Python</div>
-      <div class="card-content">
+    <!-- Week 6: Python -->
+    <div class="week-card">
+      <h2>Week 6: Python</h2>
+      <p>Introduction to Python programming.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week6')">Python Basics</button></li>
-          <li><button class="btn" onclick="openModal('week6')">Libraries: NumPy, Pandas</button></li>
+          <li><a href="#" class="open-modal" data-topic="Python Basics" data-video1="https://youtu.be/example63" data-video2="https://youtu.be/example64">Python Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="Functions" data-video1="https://youtu.be/example65" data-video2="https://youtu.be/example66">Functions</a></li>
+          <li><a href="#" class="open-modal" data-topic="Loops" data-video1="https://youtu.be/example67" data-video2="https://youtu.be/example68">Loops</a></li>
+          <li><a href="#" class="open-modal" data-topic="Modules" data-video1="https://youtu.be/example69" data-video2="https://youtu.be/example70">Modules</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 7 -->
-    <div class="card">
-      <div class="card-header">Week 7: Web Programming</div>
-      <div class="card-content">
+    <!-- Week 7: SQL -->
+    <div class="week-card">
+      <h2>Week 7: SQL</h2>
+      <p>Introduction to databases and SQL.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week7')">HTML & CSS</button></li>
-          <li><button class="btn" onclick="openModal('week7')">JavaScript</button></li>
+          <li><a href="#" class="open-modal" data-topic="SQL Basics" data-video1="https://youtu.be/example71" data-video2="https://youtu.be/example72">SQL Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="Tables" data-video1="https://youtu.be/example73" data-video2="https://youtu.be/example74">Tables</a></li>
+          <li><a href="#" class="open-modal" data-topic="Queries" data-video1="https://youtu.be/example75" data-video2="https://youtu.be/example76">Queries</a></li>
+          <li><a href="#" class="open-modal" data-topic="Transactions" data-video1="https://youtu.be/example77" data-video2="https://youtu.be/example78">Transactions</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 8 -->
-    <div class="card">
-      <div class="card-header">Week 8: Web Programming - Flask</div>
-      <div class="card-content">
+    <!-- Week 8: HTML, CSS, JavaScript -->
+    <div class="week-card">
+      <h2>Week 8: HTML, CSS, JavaScript</h2>
+      <p>Introduction to web development.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week8')">Flask Framework</button></li>
-          <li><button class="btn" onclick="openModal('week8')">Backend Development</button></li>
+          <li><a href="#" class="open-modal" data-topic="HTML Basics" data-video1="https://youtu.be/example79" data-video2="https://youtu.be/example80">HTML Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="CSS Basics" data-video1="https://youtu.be/example81" data-video2="https://youtu.be/example82">CSS Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="JavaScript Basics" data-video1="https://youtu.be/example83" data-video2="https://youtu.be/example84">JavaScript Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="DOM Manipulation" data-video1="https://youtu.be/example85" data-video2="https://youtu.be/example86">DOM Manipulation</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 9 -->
-    <div class="card">
-      <div class="card-header">Week 9: SQL</div>
-      <div class="card-content">
+    <!-- Week 9: Flask -->
+    <div class="week-card">
+      <h2>Week 9: Flask</h2>
+      <p>Introduction to Flask for web development.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week9')">SQL Queries</button></li>
-          <li><button class="btn" onclick="openModal('week9')">Database Design</button></li>
+          <li><a href="#" class="open-modal" data-topic="Flask Basics" data-video1="https://youtu.be/example87" data-video2="https://youtu.be/example88">Flask Basics</a></li>
+          <li><a href="#" class="open-modal" data-topic="Routes" data-video1="https://youtu.be/example89" data-video2="https://youtu.be/example90">Routes</a></li>
+          <li><a href="#" class="open-modal" data-topic="Templates" data-video1="https://youtu.be/example91" data-video2="https://youtu.be/example92">Templates</a></li>
+          <li><a href="#" class="open-modal" data-topic="Forms" data-video1="https://youtu.be/example93" data-video2="https://youtu.be/example94">Forms</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Week 10 -->
-    <div class="card">
-      <div class="card-header">Week 10: Final Project</div>
-      <div class="card-content">
+    <!-- Week 10: Cybersecurity -->
+    <div class="week-card">
+      <h2>Week 10: Cybersecurity</h2>
+      <p>Introduction to cybersecurity concepts.</p>
+      <button class="view-topics">View Topics</button>
+      <div class="subtopics hidden">
         <ul>
-          <li><button class="btn" onclick="openModal('week10')">Project Requirements</button></li>
-          <li><button class="btn" onclick="openModal('week10')">Collaboration and Final Presentation</button></li>
+          <li><a href="#" class="open-modal" data-topic="Passwords" data-video1="https://youtu.be/example95" data-video2="https://youtu.be/example96">Passwords</a></li>
+          <li><a href="#" class="open-modal" data-topic="Encryption" data-video1="https://youtu.be/example97" data-video2="https://youtu.be/example98">Encryption</a></li>
+          <li><a href="#" class="open-modal" data-topic="HTTPS" data-video1="https://youtu.be/example99" data-video2="https://youtu.be/example100">HTTPS</a></li>
+          <li><a href="#" class="open-modal" data-topic="Ransomware" data-video1="https://youtu.be/example101" data-video2="https://youtu.be/example102">Ransomware</a></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>CS50 by Harvard University | Designed for Interactive Learning</p>
-  </footer>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
+  <!--  <!-- Modal -->
+  <div id="modal" class="modal hidden">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Learn More</h2>
-      <div id="modal-body">
-        <!-- Content will be dynamically inserted here -->
-      </div>
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
     </div>
   </div>
 
-  <script>
-    // Modal functionality
-    const modal = document.getElementById('modal');
-    const span = document.getElementsByClassName('close')[0];
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <p>&copy; 2023 CourseHub. All rights reserved.</p>
+    </div>
+  </footer>
 
-    const openModal = (week) => {
-      let modalBody = '';
-      switch (week) {
-        case 'week0':
-          modalBody = `
-            <p><strong>What is Computer Science?</strong></p>
-            <iframe src="https://www.youtube.com/embed/oD-9A38Bdu8"></iframe>
-            <p><strong>Problem Solving and Algorithms</strong></p>
-            <iframe src="https://www.youtube.com/embed/8h6vGllkjcY"></iframe>
-          `;
-          break;
-        case 'week1':
-          modalBody = `
-            <p><strong>Introduction to C</strong></p>
-            <iframe src="https://www.youtube.com/embed/KJgsSFOSQv0"></iframe>
-          `;
-          break;
-        case 'week2':
-          modalBody = `
-            <p><strong>Arrays</strong></p>
-            <iframe src="https://www.youtube.com/embed/5qWZ-HK8w78"></iframe>
-            <p><strong>Sorting Algorithms</strong></p>
-            <iframe src="https://www.youtube.com/embed/3m1Ije7kEdg"></iframe>
-          `;
-          break;
-        case 'week3':
-          modalBody = `
-            <p><strong>Recursion</strong></p>
-            <iframe src="https://www.youtube.com/embed/Mv9KeI1XF28"></iframe>
-          `;
-          break;
-        case 'week4':
-          modalBody = `
-            <p><strong>Pointers and Memory Management</strong></p>
-            <iframe src="https://www.youtube.com/embed/j2KfYj_6gFA"></iframe>
-          `;
-          break;
-        case 'week5':
-          modalBody = `
-            <p><strong>Linked Lists</strong></p>
-            <iframe src="https://www.youtube.com/embed/t9w9KnG7jRM"></iframe>
-          `;
-          break;
-        case 'week6':
-          modalBody = `
-            <p><strong>Python Basics</strong></p>
-            <iframe src="https://www.youtube.com/embed/cpGJKnVh9PI"></iframe>
-          `;
-          break;
-        case 'week7':
-          modalBody = `
-            <p><strong>HTML & CSS</strong></p>
-            <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU"></iframe>
-          `;
-          break;
-        case 'week8':
-          modalBody = `
-            <p><strong>Flask Framework</strong></p>
-            <iframe src="https://www.youtube.com/embed/Z1RJmh_OqeA"></iframe>
-          `;
-          break;
-        case 'week9':
-          modalBody = `
-            <p><strong>SQL Queries</strong></p>
-            <iframe src="https://www.youtube.com/embed/9Pzj7Aj25lw"></iframe>
-          `;
-          break;
-        case 'week10':
-          modalBody = `
-            <p><strong>Final Project Requirements</strong></p>
-            <iframe src="https://www.youtube.com/embed/ITP6he2oJg8"></iframe>
-          `;
-          break;
-      }
-
-      document.getElementById('modal-body').innerHTML = modalBody;
-      modal.style.display = "block";
-    };
-
-    span.onclick = function() {
-      modal.style.display = "none";
-    };
-
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
