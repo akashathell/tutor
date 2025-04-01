@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Article</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/github-gist.min.css">
+      <link href = "style.css" rel = "stylesheet">
+      <link href = "mobile.css" rel = "stylesheet">
+      <link href = "clipboard/clipboard.css" rel = "stylesheet">
+      <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADlklEQVRYCcVXSyhtURj+kcfJ45CBlJLHvTOTO5MRJZSBgYE7oZQZKWbMSKTjNaKOQ0phwggTDCgZnCJOioGUGLhXSbnpOny3b7X3bj8WHZzbWbXb6/E/vr3W/3//2iKxN7+I/BSRoIiEReS3iESNh33OcY0ylI1b+y4iIRH5IyKI8aEsdaj76eYTkYCI/I3RqQ4cdWmDtj7UvolI5AuO3WBoizZjaj9E5FccnZtgaJO2321E+T+c20G8uRM8p3huu+nU/aYPbUwwWNzC/2tMX47GdPlKtH8UKH05UpQ56zGSk5ODrq4uLC4uYm1tDTMzM2hubkZKSopHlvqVlZWYnJzE6uoqFhYW0N7ejvT0dK2swRNqF8haHpIpKirC5eUlTk9PMTIygr6+PszNzeHh4QF7e3vIyspyGB4eHsbz8zNWVlbQ39+P8fFxXF9f4/j4GAUFBQ5Z42PpUzEmqdMjMD09jXA4jLS0NMdaaWkpbm9vMTQ0ZM3X1tbi5eUFDQ0N1hxt5uXlIRKJYHl52TFv80ffir89AvxKfrlN2OpPTU1hf3/fGodCIWxvb1tju05bWxuenp6QmpqqW2ftUEXEs7i0tITd3V3teVdVVaG1tdXS2djYwOzsrDW2A6ioqMD6+rrnyAwZFjBV1TzKVLy/v8fOzg7o0G7U3d/c3EQwGHxXxq1jjFlFVUnVKpeVlanzi0ajODo6QkdHBzIyMjyybgCUKSkpcTxJSUkePcP32wBM1MXFxWCU393d4erqCk1NTQ5jbgAMSnfLz8936Bi2eZ/QH4Hp3P7Ozs7G2NiYinjygbnmBsCv5S7wqa+vV1jeAKCOgIFgGWOfETs6Oqq20L3G8fz8PA4PDy2d94KwpqZGAWBKamypIGQqOBaZ+6+vr2hsbHTMm3Ld3d2KZMwxAW1tbWllW1pa8Pj4iOTkZN26SkMtER0cHCij7qDj7jA9SbcmABIQiaiurs6a45rP5wPtMKVNWddbEZGWipmGNzc3uLi4QCAQQE9PDwYGBnBycqICsby83GF0YmJCUTHrRm9vLwYHB3F+fo6zszMUFhY6ZA0QFhUzELXFKDc3F9xufgEDjZTKsd/v1xlEdXW1KliMCdaEzs5OZGZmamXtxYgAEl6OCSKhFxICSPiVjCASeiklALaEXssNDGon4nlD/tCPiQmCMcHA/Mpl9dO/ZiYIvpmiCfk5tYNgn4xJ6iR/s4jE5ff8HzYLHs0NdS0xAAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+      <meta property="og:title" content="Article Template">
+      <meta property="og:description" content="A 'medium' type article template with mobile support">
+      <meta property="description" content="A 'medium' type article template with mobile support">
+      <meta property="og:image" content="https://i.imgur.com/rAqmooT.png">
+      <meta property="og:url" content="https://sooraj-gupta.github.io/articletemplate">
+      <meta name="title" content="Article Template">
+      <meta name="description" content="A 'medium' type article template with mobile support">
+      <meta name="keywords" content="article, articletemplate, template, medium">
+      <meta name="robots" content="index, follow">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="language" content="English">
+      <meta name="author" content="Sooraj Gupta">
+   </head>
+   <body>
+      <div class = "nav flexcenterboth">
+         <div class = "flexcentervert innernav">
+            <div style = "" class = "logocontainer">
+               <h1 class = "logo">Using cs50.h Library with VS Code</h1>
+               <span>By: Akashdip Baral</span>
+            </div>
+            <div style = "" class = "githubcontainer">
+               <a class = "btn" style = "margin-right: 40px;" href = "https://akashathell.github.io/tutor/syllabus">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="house" class="svg-inline--fa fa-house fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 480">
+                     <path fill="#fff" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                  </svg>
+                  &nbsp;&nbsp;Home
+               </a>
+            </div>
+         </div>
+      </div>
+      <section class = "" style = "width: 100%;">
+         <center>
+            <div class = "content">
+               <h1>Setting Up CS50 Library (cs50.h) in VS Code on Windows 11</h1>
+               <h4 class = "description">Akashdip Baral<span class = "date">April 1, 2025</span></h4>
+               <img src ="https://image.freepik.com/free-photo/minimalist-copy-space-clipboard-notepad-top-view_23-2148379747.jpg" alt = "image description">
+               <p>The CS50 Library (cs50.h) provides beginner-friendly functions for handling user input in C programs. While it's easy to set up on Linux and macOS, Windows users need to install MinGW, configure VS Code, and manually install the CS50 library.</p>
+               <h2>Step 1: Install Git and MinGW</h2>
+               <p>Before setting up the CS50 library, you need a working <strong>C compiler</strong> and a Linux-like terminal on Windows.</p>
+               <h3>1. Install Git for Windows:</h3>
+               <ul>
+                  <li>Download and install <a href="https://git-scm.com/downloads" target="_blank">Git for Windows</a>.</li>
+                  <li>Git includes <strong>Git Bash</strong>, a terminal that provides Linux commands (<code>sed</code>, <code>awk</code>, <code>push</code>, <code>pull</code>), making it useful for development.</li>
+               </ul>
+               <h3>2. Install MinGW:</h3>
+               <ul>
+                  <li>Download <a href="https://sourceforge.net/projects/mingw/" target="_blank">MinGW-w64</a>.</li>
+                  <li>
+                     Install the following packages:
+                     <ul>
+                        <li><strong>GCC</strong> (GNU Compiler Collection)</li>
+                        <li><strong>Make</strong> (For compiling projects)</li>
+                        <li><strong>GDB</strong> (For debugging)</li>
+                     </ul>
+                  </li>
+                  <li>Ensure MinGW binaries (<code>bin</code> folder) are added to your Windows <strong>PATH</strong>.</li>
+               </ul>
+               <h3>3. Verify Compiler Installation:</h3>
+               <p>Open <strong>Git Bash</strong> or <strong>Command Prompt</strong> and check if <code>gcc</code> is installed:</p>
+               <pre><code>gcc --version</code></pre>
+                <img src="assets/gccVersion.png" alt="Description of the image">
+               <p>If it returns a valid GCC version, the compiler is correctly installed.</p>
+               <p></p>
+               <br>
+               <h2>Step 2: Write and Compile a Simple C Program</h2>
+               <p>To ensure that your compiler works, write a simple <strong>Hello World</strong> program:</p>
+               <h3>1. Open VS Code</h3>
+               <p>Open VS Code and add an empty folder of your choice.</p>
+               <h3>2. Create a C File</h3>
+               <p>Inside the directory, create a new file named <code>hello.c</code> and add the following code:</p>
+               <pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
+               <h3>3. Set Git Bash as Default Terminal</h3>
+               <p>Press the combination, <code>Ctrl+Shift+P</code>. This should open the command pallet above. In the command pallet type "Terminal: Select Default Profile" and select the first option.</p>
+                    <img src="assets/commandPallet.png" alt="">
+                    <p>Now select Git Bash as your default profile</p>
+                    <img src="assets/cpGitBash.png" alt="">
+               <h3>4. Compile the Program</h3>
+               <p>Open the terminal by pressing <code>Ctrl+Shift+` </code> (' ` ' is the key above Tab) and it should open the bash terminal below the code editor. In the terminal Compile the C program using <code>gcc</code>:</p>
+               <pre><code>gcc hello.c -o hello.exe</code></pre>
+               <h3>5. Run the Program</h3>
+               <p>Execute the compiled program:</p>
+               <pre><code>./hello.exe</code></pre>
+               <p>If the output displays <code>Hello, World!</code>, then your compiler is correctly set up!</p>
+               <h2>Step 3: Download and Compile the CS50 Library Locally</h2>
+               <p>Since <code>cs50.h</code> is not included by default in Windows, you need to manually install it.</p>
+               <h3>1. Download the CS50 Library Files</h3>
+               <ul>
+                  <li>Visit: <a href="https://github.com/cs50/libcs50/tree/main/src" target="_blank">CS50 Library Source</a></li>
+                  <li>
+                     Download the following files:
+                     <ul>
+                        <li><code>cs50.c</code></li>
+                        <li><code>cs50.h</code></li>
+                        <p>Click on the file and after its opened, click on "Download raw file" on the top right corner of the editor</p>
+                     </ul>
+                  </li>
+               </ul>
+               <h3>2. Compile the CS50 Object File</h3>
+               <p>Open the download folder and copy both 'cs50.h' and 'cs50.c' to another newly created folder. In the folder Right Click and then select "Show more options", then select "Open Git Bash here"</p> 
+                    <img src="assets/openGitBash.png" alt="" height="235px" width="162px">
+               <p>Run the following command to compile the object file:</p>
+               <pre><code>gcc -c -ggdb -std=c99 cs50.c -o cs50.o</code></pre>
+               <h3>3. Create the CS50 Library Archive (.a file)</h3>
+               <p>Generate a static library file using:</p>
+               <pre><code>ar rcs libcs50.a cs50.o</code></pre>
+               <h3>4. Verify the Generated Files</h3>
+               <p>List the contents of the directory to ensure all necessary files are created:</p>
+               <pre><code>ls</code></pre>
+               <p>Expected output:</p>
+               <pre><code>cs50.c  cs50.h  cs50.o  libcs50.a</code></pre>
+                    <img src="assets/bashConfirm.png" alt="">
+               <h3>5. Move the Library and Header Files to MinGW</h3>
+               <p>Copy the files to the appropriate MinGW directories:</p>
+               <pre><code>mv cs50.h /C/MinGW/include/</code></pre>
+               <pre><code>mv libcs50.a /C/MinGW/lib/</code></pre>
+               <p><strong>Note:</strong> Ensure that <code>cs50.h</code> is in <code>C:\MinGW\include</code> and <code>libcs50.a</code> is in <code>C:\MinGW\lib</code>.</p>
+               <h2>Step 4: Test the CS50 Library</h2>
+               <p>Now that the CS50 library is installed, let's test if it's working correctly.</p>
+               <h3>1. Create a New File `test.c`</h3>
+               <p>Create a new file named <code>test.c</code> and add the following code to test the <code>get_string</code> function:</p>
+               <pre><code>#include &lt;stdio.h&gt;
+#include &lt;cs50.h&gt;
+
+int main(void)
+{
+    printf("Please input a string: ");
+    string s = get_string();
+    int n = 0;
+    while (s[n] != '\0')
+    {
+        n++;
+    }
+    printf("Your string is %i chars long\n", n);
+}</code></pre>
+               <h3>2. Compile the Program Using the CS50 Library</h3>
+               <p>Use <code>gcc</code> to compile the program with the CS50 library:</p>
+               <pre><code>gcc test.c -o test.exe -lcs50</code></pre>
+               <h3>3. Run the Program</h3>
+               <p>Execute the compiled program to check if the CS50 library works:</p>
+               <pre><code>./test.exe</code></pre>
+               <p>If the program compiles successfully, accepts string input, and counts the string length, then <code>cs50.h</code> is correctly set up!</p>
+            </div>
+         </center>
+      </section>
+      <footer class = "flexcenterboth">
+         <center>
+         </center>
+      </footer>
+      <div id = "scrollshadow"></div>
+      <script src = "clipboard/clipboard.js"></script>
+      <script> Clipboard.init(); </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+   </body>
+</html>
+
